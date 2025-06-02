@@ -14,7 +14,7 @@ spec:
         app: tetris_charan
     spec:
       containers:
-      - name: tetris
+      - name: tetris_charan
         image: harinath927/hariapp:mydockerimage 
         ports:
         - containerPort: 3000   # Use port 3000
