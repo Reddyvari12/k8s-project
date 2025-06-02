@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris-charan
+  name: tetris
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tetris-charan
+      app: tetris
   template:
     metadata:
       labels:
-        app: tetris-charan
+        app: tetris
     spec:
       containers:
-      - name: tetris-charan
+      - name: tetris
         image: harinath927/hariapp:mydockerimage 
         ports:
         - containerPort: 3000   # Use port 3000
@@ -26,7 +26,7 @@ metadata:
   name: tetris-service
 spec:
   selector:
-    app: tetris-charan
+    app: tetris
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
