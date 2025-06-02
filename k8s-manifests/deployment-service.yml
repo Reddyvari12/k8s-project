@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris_charan
+  name: tetris
 spec:
   replicas: 1
   selector:
@@ -26,7 +26,7 @@ metadata:
   name: tetris-service
 spec:
   selector:
-    app: tetris
+    app: tetris_charan
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
